@@ -76,11 +76,6 @@ if st.button('Tahmini Puanı Hesapla'):
         Cosine benzerliği kullanılarak, her kullanıcının verdiği puanlar arasındaki benzerlik bulunur.
         Daha önce **Ürün 2** ve **Ürün 3** için verdiğiniz puanlar, diğer kullanıcıların aynı ürünlere verdiği puanlarla karşılaştırılır.
         Benzerlik ne kadar yüksekse, o kullanıcının değerlendirmeleri sizin tahmin edilen puanınıza o kadar çok katkı sağlar.
-
-        **Neye Göre Belirlenir?**:
-        - Diğer kullanıcıların **Ürün 4** için verdiği puanlar.
-        - Bu kullanıcıların, sizin diğer ürünlerdeki puanlarınızla benzerliği.
-        - Eğer çok sayıda kullanıcı Ürün 4 için puan vermişse, bu tahmin daha güvenilir olur.
         """)
     else:
         st.warning("Tahmin yapılamadı. Daha fazla veri girmeniz gerekebilir.")
