@@ -47,7 +47,7 @@ def tahmin_al(user_4_product_2, user_4_product_3):
 # Streamlit başlığı ve açıklama
 st.title("Ürün Değerlendirme Tahmin Aracı")
 st.write("""
-Bu araç, diğer kullanıcıların değerlendirmelerine ve sizin verdiğiniz puanlara dayanarak **Ürün 4** için tahmini puanınızı hesaplar.
+Bu araç, diğer kullanıcıların değerlendirmelerine ve sizin verdiğiniz puanlara dayanarak **Ürün 4** için tahmini puanınızı hesaplar. Bu tahmin edilen puan **Ürün 4'ü** ne kadar beğenebileceğinizi belirtmektedir.
 Tahmin edilen puan, diğer kullanıcıların benzerliklerine ve verdikleri puanlara göre belirlenir.
 """)
 
