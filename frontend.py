@@ -47,7 +47,7 @@ def tahmin_al(user_4_product_2, user_4_product_3):
 # Streamlit başlığı ve açıklama
 st.title("Ürün Değerlendirme Tahmin Aracı")
 st.write("""
-Bu araç, diğer kullanıcıların değerlendirmelerine ve sizin verdiğiniz puanlara dayanarak **Ürün 4** için tahmini puanınızı hesaplar. Bu tahmin edilen puan **Ürün 4'ü** ne kadar beğenebileceğinizi belirtmektedir.
+Bu araç, diğer kullanıcıların değerlendirmelerine ve sizin verdiğiniz puanlara dayanarak **Ürün 4** için tahmini puanınızı hesaplar.
 Tahmin edilen puan, diğer kullanıcıların benzerliklerine ve verdikleri puanlara göre belirlenir.
 """)
 
@@ -61,6 +61,10 @@ if st.button('Tahmini Puanı Hesapla'):
 
     if tahmini_puan:
         # Tahmin edilen puanı tabloya ekleyelim
+        df["Ürün 1"] = df["Ürün 1"].astype(str).replace("nan", "-")
+        df["Ürün 2"] = df["Ürün 2"].astype(str).replace("nan", "-")
+        df["Ürün 3"] = df["Ürün 3"].astype(str).replace("nan", "-")
+        df["Ürün 4"] = df["Ürün 4"].astype(str).replace("nan", "-")
         df.loc['Kullanıcı 4', 'Ürün 4'] = f"**{tahmini_puan} (Tahmin)**"
         
         # Tahmin edilen puan ile birlikte tabloyu gösterelim
